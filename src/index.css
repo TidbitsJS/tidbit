@@ -8,3 +8,11 @@
 .black-shadow {
   box-shadow: 0px 2px 3px 0px rgba(0 0 0 / 7%);
 }
+
+.header-link li {
+  transition: all 0.3s ease;
+}
+
+.header-link:hover img {
+  transform: rotate(180deg);
+}

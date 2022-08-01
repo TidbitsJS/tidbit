@@ -64,7 +64,9 @@ const links = [
 ];
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState({
+    "#Tag": false,
+  });
 
   return (
     <header
@@ -86,18 +88,19 @@ const Header = () => {
               className={`${styles.flexCenter} relative mx-4 header-link`}
               onMouseEnter={() => {
                 if (link.sublinks) {
-                  setIsOpen(true);
+                  setIsOpen({ ...isOpen, [link.name]: true });
                 }
               }}
               onMouseLeave={() => {
                 if (link.sublinks) {
-                  setIsOpen(false);
+                  setIsOpen({ ...isOpen, [link.name]: false });
                 }
               }}
             >
               <li className="text-blackColor hover:text-primary font-serifPro text-[15px] font-semibold tracking-[.3px] cursor-pointer">
                 {link.name}
               </li>
+
               {link.sublinks && (
                 <img
                   src={chevronDown}
@@ -105,18 +108,22 @@ const Header = () => {
                   className="w-3 h-3 object-contain ml-2"
                 />
               )}
-              {link.sublinks && isOpen && (
-                <ul className="absolute list-none px-8 py-4 bg-white top-9 left-0 min-w-[250px] black-shadow z-[2]">
-                  {link.sublinks.map((sublink) => (
-                    <li
-                      id={sublink.id}
-                      className={`text-blackColor hover:text-primary font-serifPro text-[14px] font-normal tracking-[.3px] cursor-pointer my-4`}
-                    >
-                      <span className={`${sublink.hashTagColor}`}># </span>
-                      {sublink.name}
-                    </li>
-                  ))}
-                </ul>
+
+              {/* @ts-ignore */}
+              {link.sublinks && isOpen[link.name] && (
+                <div className="absolute top-0 left-0 z-[2]">
+                  <ul className="list-none px-8 py-4 bg-white min-w-[250px] black-shadow mt-9">
+                    {link.sublinks.map((sublink) => (
+                      <li
+                        id={sublink.id}
+                        className={`text-blackColor hover:text-primary font-serifPro text-[14px] font-normal tracking-[.3px] cursor-pointer my-4`}
+                      >
+                        <span className={`${sublink.hashTagColor}`}># </span>
+                        {sublink.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
             </li>
           ))}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "../../style";
-import { chevronDown } from "../../assets";
+import { chevronDown, close, menu } from "../../assets";
 
 const links = [
   {
@@ -67,18 +67,19 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState({
     "#Tag": false,
   });
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
     <header
-      className={`${styles.flexCenter} w-full ${styles.paddingY} flex-col`}
+      className={`flex sm:justify-center justify-between items-center w-full ${styles.padding} sm:flex-col flex-row`}
     >
-      <div className="flex justify-center items-center">
+      <div className="sm:flex hidden">
         <p className="font-josefinSans font-bold text-[60px] text-titlesColor">
           <span className="text-primary">T</span>idbiT
         </p>
       </div>
 
-      <div className={`${styles.flexCenter} mt-4`}>
+      <div className={`sm:flex hidden mt-4`}>
         <ul
           className={`${styles.flexBetween} list-none flex-row p-3 black-shadow bg-white`}
         >
@@ -128,6 +129,23 @@ const Header = () => {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div
+        className="sm:hidden flex"
+        onClick={() => setOpenSidebar(!openSidebar)}
+      >
+        <img
+          src={openSidebar ? menu : close}
+          alt="menu_icon"
+          className="w-8 h-8 object-contain cursor-pointer"
+        />
+      </div>
+
+      <div className="sm:hidden flex-1 flex justify-center items-center">
+        <p className="font-josefinSans font-bold ss:text-[48px] text-[40px] text-titlesColor">
+          <span className="text-primary">T</span>idbiT
+        </p>
       </div>
     </header>
   );

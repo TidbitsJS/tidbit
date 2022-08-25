@@ -1,9 +1,9 @@
-import { Header } from "./components";
+import { Home } from "./page";
 
 function App() {
   return (
-    <div className="bg-bgColor min-h-screen">
-      <Header />
+    <div className="bg-bgColor">
+      <Home />
     </div>
   );
 }

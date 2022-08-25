@@ -16,3 +16,7 @@
 .header-link:hover img {
   transform: rotate(180deg);
 }
+
+.normal-lh {
+  line-height: normal;
+}

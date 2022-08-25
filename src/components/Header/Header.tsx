@@ -131,21 +131,21 @@ const Header = () => {
         </ul>
       </div>
 
+      <div className="sm:hidden flex-1 flex justify-start items-center">
+        <p className="font-josefinSans font-bold text-[30px] text-titlesColor normal-lh">
+          <span className="text-primary">T</span>idbiT
+        </p>
+      </div>
+
       <div
         className="sm:hidden flex"
         onClick={() => setOpenSidebar(!openSidebar)}
       >
         <img
-          src={openSidebar ? menu : close}
+          src={!openSidebar ? menu : close}
           alt="menu_icon"
-          className="w-8 h-8 object-contain cursor-pointer"
+          className="w-8 h-8 object-contain cursor-pointer rotate-180"
         />
-      </div>
-
-      <div className="sm:hidden flex-1 flex justify-center items-center">
-        <p className="font-josefinSans font-bold ss:text-[48px] text-[40px] text-titlesColor">
-          <span className="text-primary">T</span>idbiT
-        </p>
       </div>
     </header>
   );

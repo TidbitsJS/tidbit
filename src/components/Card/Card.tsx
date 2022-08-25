@@ -1,3 +1,5 @@
+import styles from "../../style";
+
 const Card = () => {
   return (
     <article className="relative ss:py-12 py-6 ss:px-14 px-7 flex flex-col bg-white max-w-[825px] my-5 shadow-cardShadow">
@@ -41,10 +43,12 @@ const Card = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-[-20px] ss:left-[40%] left-[30%]">
+      <div
+        className={`${styles.flexCenter} absolute left-1/2 right-1/2 bottom-[-20px]`}
+      >
         <button
           type="button"
-          className="font-josefinSans py-[8px] px-[25px] text-white bg-blackColor text-[15px] tracking-[.5px] leading-[1.8]"
+          className="font-josefinSans min-w-[180px] py-[8px] text-white bg-blackColor text-[15px] tracking-[.5px] leading-[1.8]"
         >
           Continue Reading
         </button>

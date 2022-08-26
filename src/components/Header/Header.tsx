@@ -18,21 +18,25 @@ const links = [
         id: "link-2-1",
         name: "Productivity",
         hashTagColor: "text-[#49dfd4]",
+        hoverColor: "hover:text-[#49dfd4]",
       },
       {
         id: "link-2-2",
         name: "Programming",
         hashTagColor: "text-[#ff486a]",
+        hoverColor: "hover:text-[#ff486a]",
       },
       {
         id: "link-2-3",
         name: "Design",
         hashTagColor: "text-[#7171e2]",
+        hoverColor: "hover:text-[#7171e2]",
       },
       {
         id: "link-2-4",
         name: "Other",
         hashTagColor: "text-[#ffc947]",
+        hoverColor: "hover:text-[#ffc947]",
       },
     ],
   },
@@ -117,7 +121,7 @@ const Header = () => {
                     {link.sublinks.map((sublink) => (
                       <li
                         id={sublink.id}
-                        className={`text-blackColor hover:text-primary font-serifPro text-[14px] font-normal tracking-[.3px] cursor-pointer my-4`}
+                        className={`text-blackColor ${sublink.hoverColor} font-serifPro text-[14px] font-normal tracking-[.3px] cursor-pointer my-4`}
                       >
                         <span className={`${sublink.hashTagColor}`}># </span>
                         {sublink.name}

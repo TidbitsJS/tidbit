@@ -1,4 +1,21 @@
+import { TAGCOLORS } from "../../constant";
 import styles from "../../style";
+import Tag from "../Tag/Tag";
+
+const articleTags = [
+  {
+    name: "Productivity",
+    color: TAGCOLORS.productivity,
+  },
+  {
+    name: "Coding",
+    color: TAGCOLORS.other,
+  },
+  {
+    name: "JavaScript",
+    color: TAGCOLORS.language,
+  },
+];
 
 const Card = () => {
   return (
@@ -37,13 +54,13 @@ const Card = () => {
       </div>
 
       <div className="flex flex-wrap ss:mb-2 mb-5">
-        {["Productivity", "Coding", "JavaScript"].map((tag) => (
-          <p
-            key={tag}
-            className="font-josefinSans font-medium text-[14px] text-blackColor py-[6px] px-[8px] shadow-tagShadow mr-[10px] cursor-pointer"
-          >
-            # {tag}
-          </p>
+        {articleTags.map((tag) => (
+          <Tag
+            key={tag.name}
+            tagName={tag.name}
+            hashTagColor={tag.color}
+            restStyles="mr-[10px]"
+          />
         ))}
       </div>
 

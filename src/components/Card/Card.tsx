@@ -2,19 +2,23 @@ import styles from "../../style";
 
 const Card = () => {
   return (
-    <article className="relative ss:py-12 py-6 ss:px-14 px-7 flex flex-col bg-white max-w-[825px] my-5 shadow-cardShadow">
-      <div className="flex flex-row">
-        <div className="w-[120px] h-[120px] ss:block hidden">
+    <article className="relative ss:py-12 py-6 ss:px-14 px-7 flex flex-col bg-white max-w-[825px] my-7 shadow-cardShadow">
+      <div className="flex xs:flex-row flex-col">
+        <div className="xs:w-[120px] w-full h-[120px] relative">
           <img
             src="https://images.unsplash.com/photo-1565889673146-8e4d54300269?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
             alt="card_img"
             className="w-full h-full object-cover"
           />
+
+          <div className="absolute inset-0 m-1 border-[1px] border-white" />
         </div>
 
-        <div className="flex-1 flex flex-col ss:ml-5 ml-0">
-          <h1 className="font-josefinSans font-bold text-[38px] leading-[1.2] mb-2 text-titlesColor">
-            Far far away, behind the word mountains
+        <div className="flex-1 flex flex-col xs:ml-5 ml-0 xs:mt-0 mt-5">
+          <h1 className="font-josefinSans font-bold sm:text-[38px] text-[28px] leading-[1.2] mb-2 text-titlesColor cursor-pointer">
+            <span className="card-title">
+              Far far away, behind the word mountains
+            </span>
           </h1>
 
           <time className="font-serifPro font-normal text-[15px] text-textColor">

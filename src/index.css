@@ -20,3 +20,28 @@
 .normal-lh {
   line-height: normal;
 }
+
+.card-title {
+  padding-bottom: 5px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#65ebe7),
+    to(#65ebe7)
+  );
+  background-image: -o-linear-gradient(left, #65ebe7 0%, #65ebe7 100%);
+  background-image: linear-gradient(to right, #65ebe7 0%, #65ebe7 100%);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  background-position: left 70%;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.card-title:hover {
+  color: #454360;
+  background-size: 100% 15%;
+  background-position: left 80%;
+}

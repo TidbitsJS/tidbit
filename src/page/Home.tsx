@@ -7,8 +7,13 @@ const Home = () => {
     <>
       <Header />
 
-      <section className={`${styles.flexCenter} ${styles.padding} mt-10`}>
-        <div className={`${styles.boxWidth} ${styles.flexCenter}`}>
+      <section className={`${styles.flexCenter} ${styles.padding}`}>
+        <div className={`${styles.boxWidth} ${styles.flexCenter} flex-col`}>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
           <Card />
         </div>
       </section>

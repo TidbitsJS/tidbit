@@ -1,5 +1,6 @@
 import { TAGCOLORS } from "../../constant";
 import styles from "../../style";
+import Button from "../Button/Button";
 import Tag from "../Tag/Tag";
 
 const articleTags = [
@@ -67,12 +68,13 @@ const Card = () => {
       <div
         className={`${styles.flexCenter} absolute left-1/2 right-1/2 bottom-[-20px]`}
       >
-        <button
+        {/* <button
           type="button"
           className="font-josefinSans min-w-[180px] py-[8px] text-white bg-blackColor text-[15px] tracking-[.5px] leading-[1.8]"
         >
           Continue Reading
-        </button>
+        </button> */}
+        <Button name="Continue Reading" />
       </div>
     </article>
   );

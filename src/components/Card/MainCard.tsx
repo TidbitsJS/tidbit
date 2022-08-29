@@ -1,8 +1,7 @@
-import { TAGCOLORS } from "../../constant";
-
 import Tag from "../Tag/Tag";
 import styles from "../../style";
 import Button from "../Button/Button";
+import { TAGCOLORS } from "../../constant";
 
 const articleTags = [
   {
@@ -19,7 +18,7 @@ const articleTags = [
   },
 ];
 
-const Card = () => {
+const MainCard = () => {
   return (
     <article className="relative ss:py-12 py-6 ss:px-14 px-7 flex flex-col bg-white max-w-[825px] my-7 shadow-cardShadow">
       <div className="flex xs:flex-row flex-col">
@@ -75,4 +74,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default MainCard;

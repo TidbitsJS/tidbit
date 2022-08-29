@@ -21,6 +21,7 @@ module.exports = {
         cardShadow:
           "0 3px 12px -1px rgb(7 10 25 / 10%), 0 22px 27px -30px rgb(7 10 25 / 10%)",
         tagShadow: "0px 2px 6px rgb(7 10 25 / 10%)",
+        postCardShadow: "0 3px 5px -2px rgb(7 10 25 / 20%)",
       },
     },
     screens: {

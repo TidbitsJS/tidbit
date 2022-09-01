@@ -21,7 +21,7 @@
   line-height: normal;
 }
 
-.card-title {
+.title-effect {
   padding-bottom: 5px;
   background-image: -webkit-gradient(
     linear,
@@ -44,4 +44,18 @@
   color: #454360;
   background-size: 100% 15%;
   background-position: left 80%;
+}
+
+.post-card-title:hover {
+  color: #454360;
+  background-size: 100% 13%;
+  background-position: left 80%;
+}
+
+.tag {
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
 }

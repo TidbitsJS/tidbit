@@ -11,7 +11,9 @@ const PostCard = () => {
       </div>
       <div className="flex flex-col ml-4 flex-1">
         <h4 className="font-josefinSans font-bold text-titlesColor text-[15px] tracking-[.25px] leading-[1.45]">
-          Far far away, behind the word mountains
+          <span className="title-effect post-card-title">
+            Far far away, behind the word mountains
+          </span>
         </h4>
         <time className="font-serifPro font-normal text-textColor text-[12px] mt-1">
           August 15, 2022

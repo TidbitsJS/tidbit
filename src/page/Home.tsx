@@ -39,6 +39,9 @@ const Home = () => {
           <div className={`flex-2 ${styles.flexCenter} flex-col`}>
             <MainCard />
             <MainCard />
+            <MainCard />
+            <MainCard />
+            <MainCard />
           </div>
 
           <div className="flex flex-[.95] md:flex-col flex-wrap md:ml-16 ml-0 md:mt-0 mt-12 sticky top-0 h-fit min-w-[270px]">

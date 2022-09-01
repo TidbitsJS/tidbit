@@ -34,7 +34,7 @@ const MainCard = () => {
 
         <div className="flex-1 flex flex-col xs:ml-5 ml-0 xs:mt-0 mt-5">
           <h1 className="font-josefinSans font-bold sm:text-[38px] text-[28px] leading-[1.2] mb-2 text-titlesColor cursor-pointer">
-            <span className="card-title">
+            <span className="title-effect card-title">
               Far far away, behind the word mountains
             </span>
           </h1>

@@ -1,6 +1,14 @@
 import styles from "../style";
-import { MainCard, Header, PostCard, SectionTitle, Tag } from "../components";
+import {
+  MainCard,
+  Header,
+  PostCard,
+  SectionTitle,
+  Tag,
+  SocialMediaCard,
+} from "../components";
 import { TAGCOLORS } from "../constant";
+import { github, instagram, linkedin, twitter } from "../assets";
 
 const articleTags = [
   {
@@ -29,6 +37,29 @@ const articleTags = [
   },
 ];
 
+const media = [
+  {
+    icon: twitter,
+    url: "https://twitter.com/TidbitsJS",
+    iconBg: "bg-[#63cdf1]",
+  },
+  {
+    icon: instagram,
+    url: "https://www.instagram.com/tidbits.js",
+    iconBg: "bg-[#e62ba9]",
+  },
+  {
+    icon: linkedin,
+    url: "https://www.linkedin.com/in/sujata-gunale-15964b166/",
+    iconBg: "bg-[#0288D1]",
+  },
+  {
+    icon: github,
+    url: "https://github.com/TidbitsJS",
+    iconBg: "bg-[#000]",
+  },
+];
+
 const Home = () => {
   return (
     <>
@@ -44,8 +75,8 @@ const Home = () => {
             <MainCard />
           </div>
 
-          <div className="flex flex-[.95] md:flex-col flex-wrap md:ml-16 ml-0 md:mt-0 mt-12 sticky top-0 h-fit min-w-[270px]">
-            <div className="my-6 flex flex-col flex-1 mr-10 min-w-[270px]">
+          <div className="flex flex-[.95] md:flex-col flex-wrap md:ml-16 ml-0 md:mt-6 mt-12 sticky top-0 h-fit min-w-[270px] gap-8">
+            <div className="flex flex-col flex-1 min-w-[270px]">
               <SectionTitle title="Recent Posts" />
 
               <div className="mt-8">
@@ -55,14 +86,29 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="my-6 flex flex-col flex-1 min-w-[270px]">
+            <div className="flex flex-col flex-1 min-w-[270px]">
               <SectionTitle title="Tag Cloud" />
 
-              <div className="mt-6 flex flex-wrap">
+              <div className="my-6 flex flex-wrap">
                 {articleTags.map((tag, index) => (
                   <div key={`tag-cloud-${index + 1}`} className="w-fit m-2">
                     <Tag tagName={tag.name} hashTagColor={tag.color} />
                   </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex-1 flex flex-col min-w-[270px]">
+              <SectionTitle title="Social" />
+
+              <div className="mt-6 flex flex-wrap gap-4">
+                {media.map((item, index) => (
+                  <SocialMediaCard
+                    key={`media-${index}`}
+                    icon={item.icon}
+                    url={item.url}
+                    iconBg={item.iconBg}
+                  />
                 ))}
               </div>
             </div>

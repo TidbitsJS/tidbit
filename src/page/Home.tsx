@@ -65,7 +65,7 @@ const Home = () => {
     <>
       <Header />
 
-      <section className={`${styles.flexCenter} ${styles.paddingX}`}>
+      <section className={`${styles.flexCenter} ${styles.paddingX} pb-6`}>
         <div className={`${styles.boxWidth} flex md:flex-row flex-col`}>
           <div className={`flex-2 ${styles.flexCenter} flex-col`}>
             <MainCard />
